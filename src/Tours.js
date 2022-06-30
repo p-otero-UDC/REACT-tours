@@ -4,10 +4,9 @@ import Loading from "./Loading";
 
 export default function Tours() {
   const [tours, setTours] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("USE EFFECT...");
     setLoading(true);
     fetchTours().then(
       (toursData) => {
